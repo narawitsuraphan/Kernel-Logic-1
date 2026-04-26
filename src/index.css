@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Prompt", system-ui, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Animations for Reasoning Box */
+@keyframes glow-pulse {
+  0% { box-shadow: 0 0 5px rgba(168, 162, 158, 0.2); border-color: rgba(168, 162, 158, 0.3); }
+  50% { box-shadow: 0 0 15px rgba(168, 162, 158, 0.4); border-color: rgba(168, 162, 158, 0.6); }
+  100% { box-shadow: 0 0 5px rgba(168, 162, 158, 0.2); border-color: rgba(168, 162, 158, 0.3); }
+}
+
+.animate-glow-pulse {
+  animation: glow-pulse 2s infinite ease-in-out;
+}
+
+@keyframes dots {
+  0%, 20% { content: "."; }
+  40% { content: ".."; }
+  60% { content: "..."; }
+  80%, 100% { content: ""; }
+}
+
+.loading-dots::after {
+  content: ".";
+  animation: dots 1.5s infinite steps(1);
+}
+
+@keyframes slide-up {
+  from { transform: translateY(10px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.animate-slide-up {
+  animation: slide-up 0.4s ease-out forwards;
+}
