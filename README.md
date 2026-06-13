@@ -1,46 +1,40 @@
-# Kernel Logic 1 (chatai) - วิธีใช้งาน
+# Kernel Logic 1 (chatai) - User Guide
 
-**Kernel Logic 1** เป็นเว็บแอปพลิเคชัน AI Chat อัจฉริยะที่พัฒนาโดย **NS Studio** ออกแบบมาเพื่อให้การโต้ตอบกับ AI มีประสิทธิภาพสูงสุด รองรับทั้งการแชททั่วไปและการเขียนโค้ดระดับสูง
+Kernel Logic 1 is an intelligent AI Chat web application developed by NS Studio. Designed to maximize the efficiency of AI interactions, it seamlessly supports both casual conversation and advanced programming tasks.
 
-## ✨ คุณสมบัติเด่น
-- **รองรับหลายโมเดล:** สามารถเลือกใช้งานได้ทั้ง Gemini API (Google) และโมเดลท้องถิ่น (Ollama/OpenAI compatible)
-- **โหมดเขียนโค้ด (Code Mode):** ปรับแต่งระบบเพื่อการเขียนโปรแกรมและการแก้ปัญหาทางเทคนิคโดยเฉพาะ
-- **ระบบดึงข้อมูลจาก URL:** สามารถส่งลิงก์เพื่อให้ AI เข้าไปอ่านเนื้อหาในเว็บไซต์ได้ (รองรับ jina.ai)
-- **Markdown & Code Highlighting:** แสดงผลข้อความและโค้ดได้อย่างสวยงาม อ่านง่าย พร้อมปุ่มคัดลอกโค้ด
-- **Reasoning Process:** รองรับการแสดงกระบวนการคิดของ AI ผ่านแท็ก `<think>`
-- **ประวัติการแชท:** บันทึกการสนทนาไว้ในเบราว์เซอร์ (Sidebar) ทำให้ไม่พลาดการคุยที่ค้างไว้
+## ✨ Key Features
+- Multi-Model Support: Choose between Google's Gemini API and local/OpenAI-compatible models via Ollama.
+- Code Mode: A specialized system configuration optimized for programming, debugging, and technical problem-solving.
+- URL Data Extraction: Submit website links directly into the chat for the AI to read and analyze (powered by jina.ai).
+- Markdown & Code Highlighting: Beautifully renders text and code blocks with syntax highlighting and a built-in "Copy Code" button.
+- Reasoning Process: Supports transparent display of the AI's step-by-step thinking via the <think> tag.
+- Chat History: Local browser storage (Sidebar) keeps track of your past conversations so you never lose your progress.
 
-## 🛠️ การติดตั้งและตั้งค่าเริ่มต้น
+## 🛠️ Installation & Initial Setup
 
-1. **ติดตั้ง Dependencies:**
-   ```bash
+1. Install Dependencies:
    npm install
-   ```
 
-2. **ตั้งค่า Environment Variables:**
-   สร้างหรือแก้ไขไฟล์ `.env` ในโฟลเดอร์ root:
-   ```env
+2. Configure Environment Variables:
+   Create or edit the `.env` file in your root directory:
    VITE_GEMINI_API_KEY=YOUR_GEMINI_API_KEY_HERE
-   ```
 
-3. **ตั้งค่า API Proxy (กรณีใช้โมเดลท้องถิ่น):**
-   หากต้องการใช้งานร่วมกับ Ollama หรือ API อื่นๆ ให้แก้ไขไฟล์ `vite.config.js` ในส่วนของ `proxy` ให้ตรงกับ URL ของเซิร์ฟเวอร์ที่คุณใช้งาน
+3. Set Up API Proxy (For Local Models):
+   If you plan to use Ollama or other custom APIs, modify the `proxy` section in your `vite.config.js` file to match your local server URL.
 
-## 🚀 วิธีการเริ่มใช้งาน
+## 🚀 Getting Started
 
-1. **รันเซิร์ฟเวอร์สำหรับการพัฒนา:**
-   ```bash
+1. Run the Development Server:
    npm run dev
-   ```
 
-2. **เข้าใช้งานผ่านเบราว์เซอร์:**
-   โดยปกติจะเป็น URL `http://localhost:5173`
+2. Access via Browser:
+   Open your browser and navigate to the default URL: http://localhost:5173
 
-## 📝 คำแนะนำการใช้งาน
-- **การแชท:** พิมพ์ข้อความที่ต้องการคุยในช่อง input ด้านล่างแล้วกด Enter หรือปุ่มส่ง
-- **การใช้ Code Mode:** คลิกไอคอนรูปโค้ด (</>) เพื่อเปิดโหมดเขียนโค้ดสำหรับการทำงานที่ต้องการความแม่นยำสูง
-- **การแนบลิงก์:** คุณสามารถใส่ URL ในแชท ระบบจะพยายามดึงเนื้อหาจากเว็บไซต์นั้นมาประกอบการวิเคราะห์
-- **การจัดการแชท:** ใช้ Sidebar ด้านซ้ายเพื่อสร้างแชทใหม่ หรือกลับไปดูแชทเก่าๆ
+## 📝 Usage Tips
+- General Chatting: Type your prompt into the bottom input field and press Enter (or click the send button).
+- Activating Code Mode: Click the code icon (</>) to toggle Code Mode for high-precision technical tasks.
+- Attaching Links: Simply paste a URL into the chat. The system will automatically fetch and ingest the website's content for analysis.
+- Managing Conversations: Use the left Sidebar to start a new chat session or clear/return to previous history.
 
 ---
-**Engineered by NS Studio · Frontier Grade Intelligence**
+Engineered by NS Studio · Frontier Grade Intelligence
